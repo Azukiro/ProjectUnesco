@@ -1,0 +1,594 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+    font-family: Cicle;
+    src: url('Polices/Cicle.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Dyno;
+    src: url('Polices/Dyno.ttf') format('truetype');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #505050;
+    font-family: Cicle;
+}
+
+hr {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    color: #FFFFFF;
+}
+
+/*----------------------Navigation bar--------------------------*/
+nav {
+  height: 10vh;
+  background: #333333;
+  position:static;
+}
+
+.nav-logo{
+    float: left;
+    width: 20%;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  width: 80%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-items li {
+   padding: 20px 10px;
+}
+
+.nav-items li:hover {
+    background-color: #555;
+    color: white;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+@media screen and (max-width:2000px) {
+  .line{
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+
+  .burger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 15px;
+    z-index: 5;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav-items {
+    position: fixed;
+    background: #333333;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(0px at 90% -10%);
+    -webkit-clip-path: circle(0px at 90% -10%);
+    transition: all 1s ease-out;
+  }
+
+  .nav-items.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    z-index: 4;
+  }
+}
+
+/*--------------------Footer----------------------------*/
+.footer-main {
+    background: #333333;
+    width: 100%;
+    height: 60px;
+    padding: 20px 0px;
+    margin-top: 15%;
+}
+
+.footer-left {
+    width: 80%;
+    float: left;
+    height: 60px;
+}
+
+.footer-left ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-left ul li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.footer-right {
+    width: 20%;
+    float: right;
+    height: 60px;
+}
+
+.footer-right ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-right ul li {
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+}
+
+.footer-img {
+    height: 60px;
+}
+
+/*-------------------------Titles--------------------------*/
+.title_bar {
+    /*modife*/
+    border: 5px solid #ea840c;
+    background-color: #ea840c;
+    text-align: center;
+    font-family: Dyno;
+    color: white;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+.title2 {
+    color: #ea840c;
+    text-align: center;
+    font-family: Dyno;
+    font-size:32px;
+}
+
+.title3 {
+    border: 5px outset #ea840c;     /*Permet d'obtenir un cadre bi-couleur*/
+    text-align: center;
+    font-family: Cicle;
+    color: white;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 1%;
+}
+
+.title3 li {
+    list-style-type: none;
+    display: inline;
+    font-family: Cicle;
+    margin-left: 2%;
+}
+
+.title4 {
+    text-align: center;
+    font-family: Cicle;
+    color: white;
+    font-size:26px;
+}
+
+/*--------------------Images----------------------------*/
+.logo {
+    float: left;
+    height: 50px;
+    padding: 7px 10px;
+}
+
+.profil {
+    width: 80%;
+    border: 2px solid #000;
+    border-radius:5px;
+}
+
+.home_picture {
+    height: 30%;
+    width: 100%;
+}
+
+.img_lang {
+    height: 16px;
+    width: 16px;
+}
+
+
+.images_line_index>.container{
+    background-color: #333;
+    width:23%;
+
+    margin-right: 3%;
+    margin-left: 5%;
+}
+
+
+
+
+.container {    /* class permettant d'aligner nos images en ligne*/
+    float: left;
+    width: 30%;
+    margin-right: 1%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    text-align: center;
+    font-family: Cicle;
+}
+
+
+
+.images_line_index {
+    margin-left:0;
+    padding-bottom: 5px;
+    margin-left:   7%;
+}
+
+.images_line {
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+
+.photo_text {
+    float: left;
+}
+
+.gallery_image {
+    width: 90%;
+}
+
+.index_image {
+    margin-top: 6%;
+    width: 70%;
+    border:5px solid #f7af3e;
+}
+/* Opacité */
+
+
+.pdp_plan {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    width: 30%;
+}
+
+/*------------------------Text----------------------------*/
+.table_mat { /* Class pour formater les intraliens */
+    padding: 3% 5%;
+    padding-top: 0;
+
+
+}
+
+.table_mat>ul>li {
+    list-style-type: none;
+    background-color: #f7af3e;
+    float: left;
+    margin-left: 7%;
+    padding: 1%;
+    font-family: Cicle;
+    border :3px outset #f7af3e;
+    border-radius: 5px;
+}
+
+.text_box {
+    margin-top: 2%;
+    margin-left: 9%;
+    margin-right: 9%;
+    font-family: Cicle;
+    color: #fff;
+    font-size: 20px;
+}
+
+.list {
+    list-style-type: none;
+}
+
+/*------------------------Timeline----------------------------*/
+
+.chrono {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 8%;
+}
+
+.cercle { /*Dessiner un cercle */
+    background: #f7af3e;
+    border: 2px solid #f7af3e;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: -35%;
+    margin-left: 23%;
+    z-index: 2;
+    position: relative;
+}
+
+.dropdown-chrono {/* Affcihage des textes de la frise*/
+    display: inline-block;
+    float: left;
+    padding-top: 3%;
+    padding-left: 5%;
+    margin-left: 10%;
+    font-family: Cicle;
+    width:2%;
+}
+
+.frise {
+    background-color: #333333;
+    padding-bottom: 10%;
+    margin-top: 78%;
+    margin-right: -380%;
+    margin-left: -372%;
+    z-index: 1;
+    position: relative;
+}
+
+.date {
+    margin-top: 2%;
+    color: white;
+    font-size:20px;
+}
+
+.text {
+    display: none;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    margin-left: -40px;
+    padding: 0.5%;
+    text-align: center;
+    z-index: 3;
+    font-size: 20px;
+}
+
+.cercle:hover {
+    cursor: pointer;
+    background: white;
+}
+
+.cercle:hover+.text { /*Quand on passe sur les cercle permet d'ouvrir le texte */
+    color: white;
+    display: block;
+    background-color: #f7af3e;
+}
+/*------------------------a propos----------------------------*/
+.partenaire {
+    width: 100px;
+}
+
+.us{
+    margin-left: 5%;
+}
+.credit {
+    width: 50%;
+    float: right;
+}
+
+.img-propos {
+    border-radius: 10px;
+    background-color: #333333;
+    margin: 0;
+    margin-bottom: 3%;
+    padding: 1%;
+    padding-top:2%;
+    height: auto;
+    width: 150px;
+    float: left;
+    margin-left: 3%;
+    text-align: center;
+    color: white;
+}
+
+/*----------------Séjours-------------------------------*/
+.hidder {
+    /*modife*/
+    background-color: #505050;
+    color: #fff;
+    font-family: Dyno;
+    font-size: 170%;
+}
+
+.hidder label {
+    cursor: pointer;
+}
+
+
+#Hotels-block, #Resto-block, #Act-block { /* le bloc n'est pas visible lorsque la checkbox n'est pas cochée */
+    display: none;
+    line-height: 200%;
+    margin-left: 30%;
+    margin-top: -8%;
+    font-family: Cicle;
+}
+
+
+#Hotels-toggle:checked+#Hotels-block, #Resto-toggle:checked+#Resto-block, #Act-toggle:checked+#Act-block {  /* le bloc est visible lorsque la checkbox est cochée */
+    display: block;
+    font-family: Cicle;
+}
+
+/*bloc de la liste et des choix*/
+#sej {
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-family: Cicle;
+}
+
+#choice {
+    width: 60%;
+    float: left;
+}
+
+.titre-list {
+    text-align: center;
+    font-family: Dyno;
+}
+
+.titre-list hr {
+    width: 60%;
+    margin-left: 20%;
+}
+
+label hr {
+    margin-left: -1%;
+}
+
+.object-list {
+    margin-top: 9%;
+    margin-bottom: 6%;
+}
+
+#My_list {
+    margin-left: 70%;
+    margin-right: 0%;
+    border-style: double;
+    border-width: 5px;
+    border-color: white;
+    color: white;
+    width: 20%;
+    font-family: Cicle;
+}
+
+#My_list ul {
+    list-style: none;
+    font-family: Cicle;
+}
+
+/*formater tout les hover des hyperlien du site*/
+.beauty-link, .table_mat a, .object-list a, .container a {
+    text-decoration: none;
+    color: white;
+}
+
+.beauty-link:hover , .object-list:hover a ,.container:hover a{
+    text-decoration: none;
+    color: #f7af3e;
+}
+
+ .table_mat a:hover {
+     text-decoration: none;
+     color: #b94503;
+ }
+.stopfloat { /*stop les alignements de blocs*/
+    clear: both;
+}
+
+/* page pont */
+.img_pont {
+    height: 30%;
+    width: 100%;
+}
+
+.img_hotelDeVille {
+    width:100%;
+}
+
+#info_droite{
+    margin-left:40%;
+    text-align:center;
+}
+
+#img_chasseEtPeche{
+    width:15%;
+}
+
+#info_gauche{
+    margin-left: 5%;
+    margin-right:40%; text-align:center;
+}
+
+
+/*------Gallery-----*/
+
+.lightbox { /*Parti de base cachée et une fois activée permet de mettre un fond transparent*/
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+    font-family: Cicle;
+    font-size: 18px;
+
+
+}
+
+.lightbox img { /*Gère l'affichage de l'image*/
+	max-width: 90%;
+	max-height: 90%;
+	position: absolute;
+	top: 3%;
+	bottom: 0;
+	left:0;
+	right:0;
+	margin: auto;
+}
+
+.lightbox:target {
+	display: block;
+
+}
+
+/*Animation*/
+.images_line_index div img {
+	opacity: 1;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;/*indique le temps de l'annimation*/
+	transition: .3s ease-in-out;
+    z-index: 1;
+}
+.images_line_index div:hover img  {
+    background-color: white;
+	opacity: .7;
+    -webkit-transform: scale(0.85);
+	transform: scale(0.85);
+}
+
+.title3 li img, .us div img, .footer-left li img{
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .2s ease-in-out;/*indique le temps de l'annimation*/
+	transition: .2s ease-in-out;
+    z-index: 1;
+}
+
+.title3 li img:hover, .us div img:hover, .footer-left li img:hover{
+    -webkit-transform: scale(1.15);
+	transform: scale(1.15);
+    z-index: 1;
+}
